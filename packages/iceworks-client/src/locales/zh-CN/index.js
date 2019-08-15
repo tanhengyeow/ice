@@ -19,6 +19,7 @@ export default {
   // quick start
   'iceworks.quickStart.title': '从热门模板开始初始化你的项目',
   'iceworks.quickStart.open': '打开项目',
+  'iceworks.quickStart.custom': '自定义模板',
   'iceworks.quickStart.more': '更多模板',
 
   // menu

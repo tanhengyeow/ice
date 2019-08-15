@@ -27,7 +27,7 @@ const headerMenuConfig = [
 
 export default class Header extends PureComponent {
   render() {
-    const { themeConfig, isMobile, className, style } = this.props;
+    const { themeConfig, isMobile, className, style, logo } = this.props;
 
     return (
       <Layout.Header
@@ -35,8 +35,13 @@ export default class Header extends PureComponent {
         className={cx('ice-design-layout-header', className)}
         style={{ ...style }}
       >
-        <Logo color={themeConfig.primaryColor} />
-
+        <Logo
+          color={themeConfig.primaryColor}
+          method={logo.method}
+          url={logo.url}
+          width={logo.width}
+          height={logo.height}
+        />
         <div className="ice-design-layout-header-menu">
           {/* Header 菜单项 begin */}
           {headerMenuConfig && headerMenuConfig.length > 0 ? (

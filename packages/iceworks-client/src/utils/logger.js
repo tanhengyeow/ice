@@ -52,7 +52,7 @@ prefix.apply(loglevel, {
 });
 
 if (process.env.NODE_ENV === 'development') {
-  loglevel.setLevel('trace');
+  loglevel.setLevel('info');
 } else {
   remote.apply(loglevel);
 

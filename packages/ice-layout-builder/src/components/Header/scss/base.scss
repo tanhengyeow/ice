@@ -17,12 +17,19 @@
       .ice-design-layout-header-menu {
         display: flex;
         .ice-menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           background: $ice-header-menu-bg;
           color: $ice-header-text-color;
+          .ice-menu-item {
+            margin: 0 20px;
+          }
           .ice-menu-item:hover,
           .ice-menu-item > a:hover {
             color: $ice-header-text-hover-color;
           }
+
         }
       }
       .ice-design-header-userpannel {

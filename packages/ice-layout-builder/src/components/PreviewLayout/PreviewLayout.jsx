@@ -40,10 +40,15 @@ export default class PreviewLayout extends Component {
 
   renderContent = () => {
     const layoutConfig = this.formatLayoutConfig();
-    const header = <Header themeConfig={layoutConfig.themeConfig} />;
+    const header =
+      <Header
+        themeConfig={layoutConfig.themeConfig}
+        style={layoutConfig.header.styles}
+        logo={layoutConfig.logo}
+      />;
     const aside = (
-      <Layout.Aside theme={layoutConfig.themeConfig.theme} width="auto">
-        <Aside layoutConfig={layoutConfig} />
+      <Layout.Aside theme={layoutConfig.themeConfig.theme} width="auto" style={layoutConfig.aside.styles}>
+        <Aside layoutConfig={layoutConfig}/>
       </Layout.Aside>
     );
     const footer = <Footer />;

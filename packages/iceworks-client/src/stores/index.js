@@ -8,6 +8,7 @@ import dependencies from './dependencies';
 import user from './user';
 import globalTerminal from './globalTerminal';
 import settingPanel from './settingPanel';
+import customScaffold from './customScaffold';
 
 const stores = {
   material,
@@ -19,6 +20,7 @@ const stores = {
   globalTerminal,
   task,
   settingPanel,
+  customScaffold,
 };
 
 const icestore = new Icestore();

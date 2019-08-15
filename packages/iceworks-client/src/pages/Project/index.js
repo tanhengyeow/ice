@@ -23,6 +23,7 @@ import SubMenu from './components/SubMenu';
 import DeleteProjectModal from './components/DeleteProjectModal';
 import SettingPanel from './components/SettingPanel';
 import QuickStart from './components/QuickStart';
+import CustomScaffoldModal from './components/CustomScaffoldModal';
 import projectStores from './stores';
 import panels from './panels';
 import styles from './index.module.scss';
@@ -116,6 +117,7 @@ const Project = ({ history, intl }) => {
     onOpenProject,
     onCreateProject,
     onChangeProjectPanel,
+    onOpenCustomScaffold,
 
     onOpenProjectModal,
     setOpenProjectModal,
@@ -123,6 +125,8 @@ const Project = ({ history, intl }) => {
     setDeleteProjectModal,
     onCreateProjectModal,
     setCreateProjectModal,
+    onOpenCustomScaffoldModal,
+    setOpenCustomScaffoldModal,
   } = useProject({ panelStores });
 
   const isCreatedProject = location.state && location.state.createdProject;
@@ -228,6 +232,7 @@ const Project = ({ history, intl }) => {
       <QuickStart
         onOpenProject={onOpenProject}
         onCreateProject={onOpenCreateProject}
+        onOpenCustomScaffold={onOpenCustomScaffold}
         scaffolds={material.recommendScaffolds}
         createProject={(scaffoldData) => setCreateProjectModal(true, scaffoldData)}
       />
@@ -263,6 +268,10 @@ const Project = ({ history, intl }) => {
         on={onCreateProjectModal}
         onCancel={() => setCreateProjectModal(false)}
         onOk={onCreateProjectModalOk}
+      />
+      <CustomScaffoldModal
+        on={onOpenCustomScaffoldModal}
+        onCancel={() => setOpenCustomScaffoldModal(false)}
       />
       <Modal
         title={<FormattedMessage id="iceworks.project.install.dependencies.title" />}

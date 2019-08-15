@@ -19,6 +19,7 @@ export default {
   // quick start
   'iceworks.quickStart.title': 'Create a new project from the most popular templates',
   'iceworks.quickStart.open': 'Open a project',
+  'iceworks.quickStart.custom': 'Build custom project',
   'iceworks.quickStart.more': 'Check more templates',
 
   // menu
@@ -288,4 +289,7 @@ export default {
 
   'iceworks.project.panel.title': 'Panel settings',
   'iceworks.engineer.config.title': 'Configuration',
+
+  // custom scaffold
+  'iceworks.customScaffold.title': "Custom Scaffold",
 };

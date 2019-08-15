@@ -28,7 +28,7 @@ const headerMenuConfig = [
 export default class Header extends PureComponent {
   render() {
     const { themeConfig, isMobile, className, style } = this.props;
-
+    debugger;
     return (
       <Layout.Header
         theme={themeConfig.theme}

@@ -24,6 +24,10 @@ function useProject({ panelStores } = {}) {
     on: onDeleteProjectModal,
     setModal: setDeleteProjectModal,
   } = useModal();
+  const {
+    on: onOpenCustomScaffoldModal,
+    setModal: setOpenCustomScaffoldModal,
+  } = useModal();
 
   // function method
   function refreshProjectStore(name) {
@@ -117,6 +121,10 @@ function useProject({ panelStores } = {}) {
     setOpenProjectModal(true);
   }
 
+  async function onOpenCustomScaffold() {
+    setOpenCustomScaffoldModal(true);
+  }
+
   async function onCreateProject(values) {
     setCreateProjectLoading(true);
     try {
@@ -173,6 +181,8 @@ function useProject({ panelStores } = {}) {
     setOpenProjectModal,
     onDeleteProjectModal,
     setDeleteProjectModal,
+    onOpenCustomScaffoldModal,
+    setOpenCustomScaffoldModal,
 
     // event handles
     onCreateProject,
@@ -180,6 +190,7 @@ function useProject({ panelStores } = {}) {
     onDeleteProject,
     onSwitchProject,
     onChangeProjectPanel,
+    onOpenCustomScaffold,
   };
 }
 

@@ -20,6 +20,7 @@ export default class PreviewLayout extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    debugger;
     this.setState({
       layoutConfig: nextProps.value,
     });
@@ -40,10 +41,10 @@ export default class PreviewLayout extends Component {
 
   renderContent = () => {
     const layoutConfig = this.formatLayoutConfig();
-    const header = <Header themeConfig={layoutConfig.themeConfig} />;
+    const header = <Header themeConfig={layoutConfig.themeConfig}/>;
     const aside = (
       <Layout.Aside theme={layoutConfig.themeConfig.theme} width="auto">
-        <Aside layoutConfig={layoutConfig} />
+        <Aside layoutConfig={layoutConfig}/>
       </Layout.Aside>
     );
     const footer = <Footer />;

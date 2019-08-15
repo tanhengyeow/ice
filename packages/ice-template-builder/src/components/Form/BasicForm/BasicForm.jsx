@@ -144,7 +144,7 @@ class BasicForm extends Component {
                     this.props.handleColorChange('primary', color)
                   }
                 />
-                
+
               </div>
 
               <div

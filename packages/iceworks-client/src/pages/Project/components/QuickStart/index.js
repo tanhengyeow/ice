@@ -11,6 +11,7 @@ const QuickStart = ({
   onCreateProject,
   scaffolds,
   createProject,
+  onOpenCustomScaffold,
 }) => {
   return (
     <div className={styles.quickStart}>
@@ -35,6 +36,10 @@ const QuickStart = ({
         <Button className={styles.btn} type="secondary" size="large" onClick={onOpenProject}>
           <Icon type="package" size="small" />
           <FormattedMessage id="iceworks.quickStart.open" />
+        </Button>
+        <Button className={styles.btn} type="primary" size="large" onClick={onOpenCustomScaffold}>
+          <Icon type="projects" size="small" />
+          <FormattedMessage id="iceworks.quickStart.custom" />
         </Button>
         <Button className={styles.btn} type="primary" size="large" onClick={onCreateProject}>
           <Icon type="plus" size="small" />

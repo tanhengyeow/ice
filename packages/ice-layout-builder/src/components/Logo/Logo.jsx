@@ -6,14 +6,17 @@ import './scss/light.scss';
 
 export default class Logo extends PureComponent {
   render() {
-    const { color } = this.props;
+    const { color, url, width, height, method } = this.props;
     const logoStyle = color ? { color: color } : {};
 
     return (
       <div className="logo" style={{}}>
-        <a href="#" className="logo-text" style={{ ...logoStyle }}>
+        { method === "text" ? <a href="#" className="logo-text" style={{ ...logoStyle }}>
           LOGO
-        </a>
+        </a> : null }
+        { method === "upload" || method === "link" ?
+          <img src={url} width={width} height={height}/>
+          : null }
       </div>
     );
   }
